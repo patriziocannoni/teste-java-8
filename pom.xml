@@ -10,6 +10,7 @@
 
     <properties>
         <java.version>8</java.version>
+        <junit.version>5.8.2</junit.version>
     </properties>
 
     <build>
@@ -29,7 +30,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.8.1</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
