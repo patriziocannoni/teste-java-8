@@ -2,6 +2,7 @@ package br.com.cannoni.oca;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -40,6 +41,20 @@ public class AppCursos {
         Period duracao = curso1.getDuracao();
 
         System.out.println(duracao);
+
+        System.out.println("----");
+
+        LocalDate agora = LocalDate.now();
+        System.out.println(agora);
+
+        LocalDate futuro = LocalDate.of(2099, 1, 25);
+        System.out.println(futuro);
+
+        Period periodo = Period.between(agora, futuro);
+        System.out.println(periodo);
+
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        System.out.println(formatador.format(agora));
     }
 
 }

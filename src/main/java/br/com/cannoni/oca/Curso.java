@@ -4,15 +4,20 @@ import java.time.LocalDate;
 import java.time.Period;
 
 import lombok.Getter;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+@RequiredArgsConstructor
 public class Curso {
 
     @Getter
+    @NonNull
     private String nome;
     
     @Getter
-    private int alunos;
+    @NonNull
+    private Integer alunos;
 
     @Getter
     @Setter
@@ -21,11 +26,6 @@ public class Curso {
     @Getter
     @Setter
     private LocalDate fim;
-
-    public Curso(String nome, int alunos) {
-        this.nome = nome;
-        this.alunos = alunos;
-    }
 
     public Period getDuracao() {
         return Period.between(fim, inicio);
